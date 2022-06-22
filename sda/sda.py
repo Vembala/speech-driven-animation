@@ -43,12 +43,6 @@ def tempdir():
 
 
 def get_audio_feature_extractor(model_path="grid", gpu=-1):
-    if model_path == "grid":
-        model_path = os.path.split(__file__)[0] + "/data/grid.dat"
-    elif model_path == "timit":
-        model_path = os.path.split(__file__)[0] + "/data/timit.dat"
-    elif model_path == "crema":
-        model_path = os.path.split(__file__)[0] + "/data/crema.dat"
 
     if gpu < 0:
         device = torch.device("cpu")
